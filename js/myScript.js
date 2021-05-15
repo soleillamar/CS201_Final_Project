@@ -31,6 +31,10 @@ $(document).ready(function(){
   $("#last-name").blur(function(){
     booking.last_name = $("#last-name").val();
   });
+  $("#email").blur(function(){
+    booking.email = $("#email").val();
+  });
+
   submitBooking();
 
   $("#start-date").datepicker();
@@ -59,3 +63,4 @@ function runFormValidations(){
   //todo write the form validations
   return true;// return true if no errors -- run false if errors
 }
+  $(number-beds).selectmenu();
