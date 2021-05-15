@@ -64,3 +64,4 @@ function runFormValidations(){
   return true;// return true if no errors -- run false if errors
 }
   $(number-beds).selectmenu();
+  $(type-beds).selectmenu();
