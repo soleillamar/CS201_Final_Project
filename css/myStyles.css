@@ -20,3 +20,12 @@ label {
       display: block;
       margin: 30px 0 0 0;
 }
+
+#formErrors {
+  display: none;
+  color: red;
+}
+
+input.error {
+  border: 2px solid red;
+}
