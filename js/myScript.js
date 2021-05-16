@@ -37,22 +37,33 @@ $(document).ready(function(){
   $("#end-date").datepicker().on("change", function(){
     booking.start_date = $("#start-date").val();
     booking.end_date = $("#end-date").val();
-    localStorage.setItem("booking-data", JSON.stringify(booking));
-    console.log(localStorage.getItem("booking-data"));
-    console.log(JSON.parse(localStorage.getItem("booking-data")));
   });
-  $("#number-beds").selectmenu();
-  booking.number_beds = $("#number-beds").val();
-  $("#type-beds").selectmenu();
-  booking.type_beds = $("#type-beds").val();
-  $("#number-bathrooms").selectmenu();
-  booking.bathrooms = $("#number-bathrooms").val();
-  $(".food").checkboxradio();
-  booking.food = $("#food").val();
-  $(".cleaning").checkboxradio();
-  booking.cleaning = $("#cleaning").val();
+  $("#number-beds").selectmenu().change(function() {
+      booking.number_beds = $("#number-beds:selected").val();
+    });
+  $("#type-beds").selectmenu().change(function() {
+      booking.type_beds = $("#type-beds:selected").val();
+    });
+  $("#number-bathrooms").selectmenu().change(function() {
+      booking.bathrooms = $("#number-bathrooms:selected").val();
+    });
+  $(".food").checkboxradio().change(function() {
+      booking.food = $(".food:checked").val();
+    });
+  $(".cleaning").checkboxradio().change(function() {
+        booking.cleaning = $(".cleaning:checked").val();
+        localStorage.setItem("booking-data", JSON.stringify(booking));
+        console.log(localStorage.getItem("booking-data"));
+        console.log(JSON.parse(localStorage.getItem("booking-data")));
+    });
   submitBooking();
 });
+
+
+
+
+
+
 
 function submitBooking(){
   $("#submit-booking").click(function(){

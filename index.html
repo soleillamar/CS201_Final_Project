@@ -12,6 +12,7 @@
   <body>
 <header class="header">
     <h1>Lamar's Lodge Booking</h1>
+        <img src="images/lodge room.jpg" alt="lodge" width="300" height="185">
 </header>
     <div class="sections">
       <h2>Personal Info</h2>
@@ -46,7 +47,7 @@
         <div>
         <label for="number-beds">Select Number of Beds:</label>
    <select name="number_beds" id="number-beds">
-     <option value="">--Please choose an option--</option>
+     <option value="" selected disabled >--Please choose an option</option>
      <option>1</option>
      <option>2</option>
      <option>3</option>
@@ -55,7 +56,7 @@
       <div>
         <label for="type-beds">Select Type of Beds:</label>
    <select name="type_beds" id="type-beds">
-     <option value="">--Please choose an option--</option>
+     <option value="" selected disabled>--Please choose an option--</option>
      <option>Twin</option>
      <option>Full</option>
      <option>Queen</option>
@@ -65,9 +66,9 @@
       <div>
         <label for="number-bathroom">Select Number of Bathrooms:</label>
    <select name="number_bathrooms" id="number-bathrooms">
-     <option value="">--Please choose an option--</option>
-     <option>1</option>
-     <option>2</option>
+     <option value="" selected disabled>--Please choose an option--</option>
+     <option value= "1">1</option>
+     <option value= "2">2</option>
    </select>
       </div>
     </div>
@@ -77,32 +78,41 @@
   <div class="input-elements">
 
     <div>
-      <fieldset id="food">
+      <fieldset id="food2">
         <legend>Food</legend>
-        <label for="checkbox-1">Breakfast</label>
-        <input class= "food"type="checkbox" name="checkbox-1" id="checkbox-1">
-        <label for="checkbox-2">Lunch</label>
-        <input class= "food"type="checkbox" name="checkbox-2" id="checkbox-2">
-        <label for="checkbox-3">Dinner</label>
-        <input class= "food"type="checkbox" name="checkbox-3" id="checkbox-3">
+        <label for="radio-1">None</label>
+        <input class= "food"type="radio" name="radio-2" id="radio-1" value="None">
+        <label for="radio-2">Breakfast</label>
+        <input class= "food"type="radio" name="radio-2" id="radio-2" value="Breakfast">
+        <label for="radio-3">Lunch</label>
+        <input class= "food"type="radio" name="radio-2" id="radio-3" value="Lunch">
+        <label for="radio-4">Dinner</label>
+        <input class= "food"type="radio" name="radio-2" id= "radio-4" value="Dinner">
+        <label for="radio-5">Breakfast and Lunch</label>
+        <input class= "food"type="radio" name="radio-2" id= "radio-5" value="Breakfast and Lunch">
+        <label for="radio-6">Breakfast and Dinner</label>
+        <input class= "food"type="radio" name="radio-2" id= "radio-6" value="Breakfast and Dinner">
+        <label for="radio-7">Lunch and Dinner</label>
+        <input class= "food"type="radio" name="radio-2" id= "radio-7" value="Lunch and Dinner">
       </fieldset>
     </div>
+
     <div>
-      <fieldset id= "cleaning">
+      <fieldset id= "cleaning2">
       <legend>Cleaning</legend>
-      <label for="radio-1">None</label>
-      <input class="cleaning" type="radio" name="radio-1" id="radio-1">
-      <label for="radio-2">Everyday</label>
-      <input class="cleaning" type="radio" name="radio-1" id="radio-2">
-      <label for="radio-3">Every Three Days</label>
-      <input class="cleaning" type="radio" name="radio-1" id="radio-3">
-      <label for="radio-4">Every Five Days</label>
-      <input class="cleaning" type="radio" name="radio-1" id="radio-4">
+      <label for="radio-8">None</label>
+      <input class="cleaning" type="radio" name="radio-1" id="radio-8" value="None">
+      <label for="radio-9">Everyday</label>
+      <input class="cleaning" type="radio" name="radio-1" id="radio-9" value="Everyday">
+      <label for="radio-10">Every Three Days</label>
+      <input class="cleaning" type="radio" name="radio-1" id="radio-10" value="Every Three Days">
+      <label for="radio-11">Every Five Days</label>
+      <input class="cleaning" type="radio" name="radio-1" id="radio-11" value="Every Five Days">
       </fieldset>
     </div>
   </div>
     <input type="button" id="submit-booking" value="Submit">
-    <div class="custom-dialog" title="Welcome to my site">
+    <div class="custom-dialog">
       <p>Thank you for choosing Lamar's Lodge! We hope you enjoy your stay here in Saipan!</p>
     </div>
     <div id="formErrors">

@@ -65,10 +65,87 @@ a {
   padding: 14px 16px;
   text-decoration: none;
   background-color: slateblue;
-
+  border-radius: 5px;
+  border-style: groove;
 }
 
 a:hover{
   background-color: lavender;
   color: black;
+}
+
+p {
+  font-weight: bold;
+  background-color: coral;
+  font-size: 25px;
+}
+#submit-booking {
+  padding: 10px;
+  font-size: 17px;
+  background-color: darkblue;
+  color: white;
+}
+#submit-booking:hover {
+  padding: 12px;
+  font-size: 18px;
+  background-color: lightblue;
+  color: black;
+}
+
+img {
+  text-align: center;
+}
+
+div#complete-name {
+  background-color: lightblue;
+  padding: 10px;
+  font-size: 20px;
+}
+div#email{
+  background-color: lightblue;
+  padding: 10px;
+  font-size: 20px;
+}
+
+div#booking-dates {
+  background-color: lightblue;
+  padding: 10px;
+  font-size: 20px;
+}
+
+div#booking-dates {
+  background-color: cornflowerblue;
+  padding: 10px;
+  font-size: 20px;
+}
+
+div#beds {
+  background-color: royalblue;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+}
+div#bathrooms {
+  background-color: royalblue;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+div#food {
+  background-color: royalblue;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+}
+div#cleaning {
+  background-color: royalblue;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+div.contact {
+  background-color: mediumslateblue;
+  font-size: 25px;
 }
