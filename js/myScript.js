@@ -38,14 +38,14 @@ $(document).ready(function(){
     booking.start_date = $("#start-date").val();
     booking.end_date = $("#end-date").val();
   });
-  $("#number-beds").selectmenu().change(function() {
-      booking.number_beds = $("#number-beds:selected").val();
+  $(".number-beds").checkboxradio().change(function() {
+      booking.number_beds = $(".number-beds:checked").val();
     });
-  $("#type-beds").selectmenu().change(function() {
-      booking.type_beds = $("#type-beds:selected").val();
+  $(".type-beds").checkboxradio().change(function() {
+      booking.type_beds = $(".type-beds:checked").val();
     });
-  $("#number-bathrooms").selectmenu().change(function() {
-      booking.bathrooms = $("#number-bathrooms:selected").val();
+  $(".number-bathrooms").checkboxradio().change(function() {
+      booking.bathrooms = $(".number-bathrooms:checked").val();
     });
   $(".food").checkboxradio().change(function() {
       booking.food = $(".food:checked").val();
