@@ -5,11 +5,11 @@ let booking = {
   "email" : "",
   "start_date": "",
   "end_date": "",
-  "number_beds" : 1,
-  "type_beds" : "King",
-  "breakfast" : true,
-  "pool" : false
-
+  "number-beds" : "",
+  "type-beds" : "",
+  "number-bathrooms" : "",
+  "food" : "",
+  "cleaning" : ""
 };
 
 let bookingTemp = JSON.parse(localStorage.getItem("booking-data"));//assumption booking data will be stored as a string
@@ -29,11 +29,9 @@ $(document).ready(function(){
   $("#last-name").blur(function(){
     booking.last_name = $("#last-name").val();
   });
-  $("#email").blur(function(){
+  $("#email").blur(function() {
     booking.email = $("#email").val();
   });
-
-  submitBooking();
 
   $("#start-date").datepicker();
   $("#end-date").datepicker().on("change", function(){
@@ -43,11 +41,12 @@ $(document).ready(function(){
     console.log(localStorage.getItem("booking-data"));
     console.log(JSON.parse(localStorage.getItem("booking-data")));
   });
-$("#number-beds").selectmenu();
-$("#type-beds").selectmenu();
-$("#number-bathrooms").selectmenu();
-$(".food").checkboxradio();
-$(".clean").checkboxradio();
+  $("#number-beds").selectmenu();
+  $("#type-beds").selectmenu();
+  $("#number-bathrooms").selectmenu();
+  $(".food").checkboxradio();
+  $(".clean").checkboxradio();
+  submitBooking();
 });
 
 function submitBooking(){
@@ -58,8 +57,7 @@ function submitBooking(){
       console.error("Form validation failed");
     }
   });
-
-};
+}
 
 function runFormValidations(){
   console.log("running form validations");
@@ -96,7 +94,7 @@ function runFormValidations(){
         $("#end-date").addClass("error");
         areFormErrors = true;
     }
-  
+
   errorMessages += "</ul>";
     if(areFormErrors) {
       document.getElementById("formErrors").innerHTML = errorMessages;
