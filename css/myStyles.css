@@ -29,3 +29,24 @@ label {
 input.error {
   border: 2px solid red;
 }
+
+.header {
+  background-color: slateblue;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.sections {
+  background-color: lightblue;
+  padding: 10px;
+  text-align: left;
+  color: white;
+}
+
+.input-elements {
+  background-color: cornflowerblue;
+  padding: 10px;
+  text-align: left;
+  color: white;
+}

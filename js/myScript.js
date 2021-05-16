@@ -5,9 +5,9 @@ let booking = {
   "email" : "",
   "start_date": "",
   "end_date": "",
-  "number-beds" : "",
-  "type-beds" : "",
-  "number-bathrooms" : "",
+  "number_beds" : "",
+  "type_beds" : "",
+  "bathrooms" : "",
   "food" : "",
   "cleaning" : ""
 };
@@ -42,10 +42,15 @@ $(document).ready(function(){
     console.log(JSON.parse(localStorage.getItem("booking-data")));
   });
   $("#number-beds").selectmenu();
+  booking.number_beds = $("#number-beds").val();
   $("#type-beds").selectmenu();
+  booking.type_beds = $("#type-beds").val();
   $("#number-bathrooms").selectmenu();
+  booking.bathrooms = $("#number-bathrooms").val();
   $(".food").checkboxradio();
-  $(".clean").checkboxradio();
+  booking.food = $("#food").val();
+  $(".cleaning").checkboxradio();
+  booking.cleaning = $("#cleaning").val();
   submitBooking();
 });
 

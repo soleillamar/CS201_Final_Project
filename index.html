@@ -10,38 +10,40 @@
     <script src="js/myScript.js" charset="utf-8"></script>
   </head>
   <body>
-
+<header class="header">
     <h1>Lamar's Lodge Booking</h1>
-    <div>
-      <h3>Personal Info</h3>
+</header>
+    <div class="sections">
+      <h2>Personal Info</h2>
     </div>
-    <div id="myName">
-    </div>
-    <div class="">
-      <div class="input-elements">
+    <div class="input-elements">
+      <div>
         <label for="first-name">First Name: </label>
         <input type="text" id="first-name" placeholder="Please enter first name" class="input" name="first_name" value="">
       </div>
-      <div class="input-elements">
+      <div>
         <label for="last-name">Last Name: </label>
         <input type="text" id="last-name" placeholder="Please enter last name" class="input" name="last_name" value="">
       </div>
-      <div class="input-elements">
+      <div>
         <label for="email">Email Address:</label>
         <input type="email" id="email" placeholder="Please enter email address" class="input" name="email" value="">
       </div>
-      <div class="input-elements">
-        <label for="start-date">Start Date:</label>
-        <input type="text" id="start-date" placeholder="Please select start date" name="start_date" value="">
-        <label for="end-date">End Date: </label>
-        <input type="text" id="end-date" placeholder="Please select end date" name="end_date" value="">
-      </div>
+
     </div>
-    <div>
-      <h3>Room</h3>
+    <div class ="sections">
+      <h2>Room</h2>
     </div>
-    <div>
       <div class="input-elements">
+        <div>
+          <label for="start-date">Start Date:</label>
+          <input type="text" id="start-date" placeholder="Please select start date" name="start_date" value="">
+        </div>
+        <div>
+          <label for="end-date">End Date: </label>
+          <input type="text" id="end-date" placeholder="Please select end date" name="end_date" value="">
+        </div>
+        <div>
         <label for="number-beds">Select Number of Beds:</label>
    <select name="number_beds" id="number-beds">
      <option value="">--Please choose an option--</option>
@@ -50,7 +52,7 @@
      <option>3</option>
    </select>
       </div>
-      <div class="input-elements">
+      <div>
         <label for="type-beds">Select Type of Beds:</label>
    <select name="type_beds" id="type-beds">
      <option value="">--Please choose an option--</option>
@@ -60,7 +62,7 @@
      <option>King</option>
    </select>
       </div>
-      <div class="input-elements">
+      <div>
         <label for="number-bathroom">Select Number of Bathrooms:</label>
    <select name="number_bathrooms" id="number-bathrooms">
      <option value="">--Please choose an option--</option>
@@ -69,11 +71,13 @@
    </select>
       </div>
     </div>
-    <div>
-      <h3>Room Service</h3>
+    <div class="sections">
+      <h2>Room Service</h2>
     </div>
+  <div class="input-elements">
+
     <div>
-      <fieldset>
+      <fieldset id="food">
         <legend>Food</legend>
         <label for="checkbox-1">Breakfast</label>
         <input class= "food"type="checkbox" name="checkbox-1" id="checkbox-1">
@@ -82,20 +86,21 @@
         <label for="checkbox-3">Dinner</label>
         <input class= "food"type="checkbox" name="checkbox-3" id="checkbox-3">
       </fieldset>
-      </div>
-      <div>
-      <fieldset>
+    </div>
+    <div>
+      <fieldset id= "cleaning">
       <legend>Cleaning</legend>
       <label for="radio-1">None</label>
-      <input class="clean" type="radio" name="radio-1" id="radio-1">
+      <input class="cleaning" type="radio" name="radio-1" id="radio-1">
       <label for="radio-2">Everyday</label>
-      <input class="clean" type="radio" name="radio-1" id="radio-2">
+      <input class="cleaning" type="radio" name="radio-1" id="radio-2">
       <label for="radio-3">Every Three Days</label>
-      <input class="clean" type="radio" name="radio-1" id="radio-3">
+      <input class="cleaning" type="radio" name="radio-1" id="radio-3">
       <label for="radio-4">Every Five Days</label>
-      <input class="clean" type="radio" name="radio-1" id="radio-4">
-    </fieldset>
-      </div>
+      <input class="cleaning" type="radio" name="radio-1" id="radio-4">
+      </fieldset>
+    </div>
+  </div>
     <input type="button" id="submit-booking" value="Submit">
     <div class="custom-dialog" title="Welcome to my site">
       <p>Thank you for choosing Lamar's Lodge! We hope you enjoy your stay here in Saipan!</p>
